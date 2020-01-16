@@ -1,0 +1,7 @@
+{
+    "intent": {
+        "person": "nuri"
+    },
+    "intent_type": "get.mobile.number.intent",
+    "utterance": "What is nuri's mobile phone"
+}

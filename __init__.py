@@ -45,10 +45,10 @@ class ContactListDB:
         
     def execsql(self, query):
         self.concur.execute(query)
-        LOG.info("SQL executed : {}".format(query))
+        # LOG.info("SQL executed : {}".format(query))
         
     def selectsql(self, query):
-        LOG.info("SQL executed : {}".format(query))
+        # LOG.info("SQL executed : {}".format(query))
         return self.concur.execute(query).fetchall()
     
     def createperson(self, person):
@@ -131,7 +131,7 @@ class ContactList(MycroftSkill):
                         if self.update_phone_number(sqliteConnection,person,mphonenum):
                             self.speak_dialog('phone.numbers.saved', data={'person':person,'mphone':mphonenum})
                     else:
-                        self.speak("nasıl isterseniz öyle olsun")                            
+                        self.speak_dialog("dont.want.to.add.phone")
                 else:
                     self.speak_dialog('phone.number.is.this', data={'person':person,'mphone':veri})
             else:
@@ -150,7 +150,7 @@ class ContactList(MycroftSkill):
                             if self.update_phone_number(sqliteConnection,active_person,mphonenum):
                                 self.speak_dialog('phone.numbers.saved', data={'person':active_person,'mphone':mphonenum})
                         else:
-                            self.speak("nasıl isterseniz öyle olsun")
+                            self.speak_dialog("dont.want.to.add.phone")
                     else:
                         self.speak_dialog('phone.number.is.this', data={'person':active_person,'mphone':veri})
                 else:
