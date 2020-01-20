@@ -6,8 +6,8 @@
 #
  dependencies:
 #   # Pip dependencies on PyPI
-   python:
-     - sqlite3
+#   python:
+#     - sqlite3
 #     - gensim
 #
 #   # Install packages with the system package manager
