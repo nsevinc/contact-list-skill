@@ -12,9 +12,9 @@
 #
 #   # Install packages with the system package manager
 #   # This searches for the provided executable and uses the package names
-#   system:
+   system:
 #     # For simple packages, this is all that is necessary
-#     all: pianobar piano-dev
+     all: sqlite3
 #
 #     # If the package has a certain name on a different platform:
 #     pkcon: pianobar libpiano-dev  # For the mycroft platform
